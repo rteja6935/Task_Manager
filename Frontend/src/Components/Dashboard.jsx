@@ -5,7 +5,8 @@ import "../CSS/DashBoard.css";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 import { fetchBoards,editBoardTitle, deleteBoard, addBoard } from "../Slices/BoardSlice";
-
+import { MdCancel } from "react-icons/md";
+import { TiTick } from "react-icons/ti";
 const Dashboard = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -108,8 +109,8 @@ const Dashboard = () => {
                 onChange={(e) => setNewBoardTitle(e.target.value)}
                 placeholder="Enter board title"
               />
-              <button onClick={handleAddBoard}>OK</button>
-              <button onClick={() => setAddingBoard(false)}>Cancel</button>
+              <button onClick={handleAddBoard}><TiTick /></button>
+              <button onClick={() => setAddingBoard(false)}><MdCancel /></button>
             </div>
           ) : (
             <div
