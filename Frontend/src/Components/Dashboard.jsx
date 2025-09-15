@@ -73,8 +73,8 @@ const Dashboard = () => {
                   value={editingTitle}
                   onChange={(e) => setEditingTitle(e.target.value)}
                 />
-                <button onClick={() => handleEditBoard(board.Board_id)}>OK</button>
-                <button onClick={() => setEditingBoard(null)}>Cancel</button>
+                <button onClick={() => handleEditBoard(board.Board_id)}><TiTick /></button>
+                <button onClick={() => setEditingBoard(null)}><MdCancel /></button>
               </div>
             ) : (
               <div className="board-card">
