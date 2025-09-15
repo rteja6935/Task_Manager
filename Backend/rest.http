@@ -1,0 +1,96 @@
+###
+GET http://localhost:3000/boards
+
+
+###
+GET http://localhost:3000/lists
+
+###
+GET http://localhost:3000/cards
+
+###
+POST http://localhost:3000/boards
+Content-Type: application/json
+
+{
+  "Board_id": "board792",
+    "title": "server Engagements",
+    "Listids": [
+      "list459"
+    ]
+}
+
+
+###
+PUT http://localhost:3000/boards/board792
+Content-Type: application/json
+
+{
+  
+    "title": "server problems"
+    
+}
+
+
+###
+DELETE http://localhost:3000/boards/board792
+Content-Type: application/json
+
+###
+POST http://localhost:3000/boards/board790/lists
+Content-Type: application/json
+
+{
+  
+    "listId": "L123"
+    
+}
+
+
+###
+POST http://localhost:3000/lists
+Content-Type: application/json
+
+{
+  
+  "List_id": "L123",
+  "title": "Backlog",
+  "card_ids": ["card126"]
+}
+
+
+###
+PUT http://localhost:3000/cards/card124
+Content-Type: application/json
+
+{
+  
+    "card_id": "card124",
+    "title": "Design programs",
+    "description": "Create wireframes and mockh",
+    "dueDate": "2025-09-23",
+    "labels": [
+      "Design",
+      "High Priority"
+    ],
+    "attachments": [
+      "homepage-wireframe.png",
+      "homepage-mockup.sketch"
+    ],
+    "comments": []
+    
+}
+
+### Move Card from One List to Another
+PUT http://localhost:3000/lists/moveCard
+Content-Type: application/json
+
+{
+  "sourceListId": "list457",
+  "destinationListId": "L123",
+  "cardId": "card123"
+}
+
+
+
+

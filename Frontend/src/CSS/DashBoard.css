@@ -1,0 +1,118 @@
+.sidebar {
+  width: 260px;
+  background: #f8f9fa;
+  border-right: 1px solid #e1e4e8;
+  padding: 20px;
+  height: calc(100vh - 60px); /* 60px = Navbar height */
+  overflow-y: auto;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.boards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Each board wrapper */
+.board-card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Board card */
+.board-card {
+  background: #fff;
+  border: 1px solid #e1e4e8;
+  padding: 12px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.board-card:hover {
+  background: #f0f4ff;
+  border-color: #c7d2fe;
+}
+
+.board-card span {
+  flex: 1;
+  font-size: 15px;
+  color: #333;
+}
+
+.board-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 6px;
+  font-size: 18px;
+  color: #555;
+}
+
+.board-actions button:hover {
+  color: #1e40af;
+}
+
+/* Add New Board */
+.new-board {
+  text-align: center;
+  color: #1e40af;
+  border: 2px dashed #c7d2fe;
+  font-weight: 500;
+}
+
+.new-board:hover {
+  background: #eef2ff;
+}
+
+/* Edit input */
+.edit-board-card {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.edit-board-card input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.edit-board-card button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #1e40af;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.edit-board-card button:nth-child(3) {
+  background: #e11d48; /* Cancel - red */
+}
+
+.edit-board-card button:hover {
+  opacity: 0.85;
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
