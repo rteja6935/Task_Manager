@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:3000", 
+  baseURL: "https://task-manager-backend-e3tc.onrender.com", 
 });
 
 // Automatically attach token to every request
