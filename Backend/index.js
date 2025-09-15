@@ -8,7 +8,7 @@ const DBurl = process.env.MONGO_URI;
 const jwtSecret = process.env.JWT_SECRET;
 const mclient=require('mongodb').MongoClient;
 app.use(cors({
-  origin: "http://localhost:5173", 
+  origin: "https://task-manager-frontend-wjhr.onrender.com", 
   credentials: true               
 }));
 app.use(express.json());
